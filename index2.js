@@ -6,7 +6,7 @@ const radius = 15;         // circle radius (manual input)
 const chairWidth = 1.5;    // width of a chair
 const minMargin = 1;       // minimum spacing between chairs
 const maxMargin = 10;      // maximum spacing
-const totalChairs = 4;    // total number of chairs
+const totalChairs = 7;    // total number of chairs
 
 // === Scene setup ===
 const scene = new THREE.Scene();
@@ -44,13 +44,14 @@ function placeChairsAroundCircle(numChairs) {
   let margin = totalMargin / numChairs;
   margin = Math.min(Math.max(margin, minMargin), maxMargin);
 
-  const arcLength = chairWidth + margin;
-  const angleStep = arcLength / radius; // radians between chairs
+  // const arcLength = chairWidth + margin;
+  const angleStep = 2*Math.PI / numChairs // radians between chairs
 
   const placements = [];
-
+  console.log(angleStep);
   // Start from angle = 0 and go counterclockwise
   for (let i = 0; i < numChairs; i++) {
+
     const angle = i * angleStep;
     const x = radius * Math.cos(angle);
     const z = radius * Math.sin(angle);

@@ -57,3 +57,4 @@ package-lock.json
 
 # Optional: if you are using a specific framework like Next.js
 .next/
+.early.coverage
