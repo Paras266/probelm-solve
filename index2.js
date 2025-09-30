@@ -29,7 +29,7 @@ function createChair(x, z, rotY = 0) {
   const chairGeom = new THREE.BoxGeometry(chairWidth, 1, chairWidth);
   const chairMat = new THREE.MeshBasicMaterial({ color: 0x1f6feb });
   const chair = new THREE.Mesh(chairGeom, chairMat);
-  chair.position.set(x, 0, z);
+  chair.position.set(x, 0.01, z);
   chair.rotation.y = rotY;
   scene.add(chair);
 }
@@ -46,16 +46,16 @@ function placeChairsAroundCircle(numChairs) {
 
   // const arcLength = chairWidth + margin;
   const angleStep = 2*Math.PI / numChairs // radians between chairs
-
+  const gap = 1.1
   const placements = [];
   console.log(angleStep);
   // Start from angle = 0 and go counterclockwise
   for (let i = 0; i < numChairs; i++) {
 
-    const angle = i * angleStep;
-    const x = radius * Math.cos(angle);
-    const z = radius * Math.sin(angle);
-    const rotY = angle + Math.PI; // face the table center
+    const angle = i * angleStep ;
+    const x = gap*radius * Math.cos(angle);
+    const z = gap*radius * Math.sin(angle);
+    const rotY =  Math.PI/2; // face the table center
     placements.push({ x, z, rotY });
   }
 
