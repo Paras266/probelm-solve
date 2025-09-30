@@ -1,12 +1,12 @@
 import * as THREE from 'three'
-import { OrbitControls } from "three/examples/jsm/Addons.js";9
+import { OrbitControls } from "three/examples/jsm/Addons.js";
  
 const tableLength = 10;   // long side
 const tableWidth  = 10;   // short side
 const chairWidth  = 1.5;
 const minMargin   = 1;
 const maxMargin   = 10;
-const totalChairs = 6; 
+const totalChairs = 11; 
 
 
 const scene = new THREE.Scene();
