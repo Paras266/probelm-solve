@@ -1,0 +1,59 @@
+# Dependencies
+node_modules/
+.pnp/
+.pnp.cjs
+
+# Testing
+/coverage
+/.nyc_output
+
+# Production
+/build
+/dist
+/public/build
+/public/dist
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.log
+
+# Environment variables
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-workspace
+*.DS_Store
+
+# macOS specific files
+.DS_Store
+
+# Thumbnails
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Other common files
+*.swp
+*.bak
+*.swo
+*.tmp
+*.log
+
+# Npm package manager specific
+package-lock.json
+# yarn.lock # Uncomment if you are using npm and not yarn
+
+# Optional: if you are using TypeScript
+*.tsbuildinfo
+
+# Optional: if you are using a specific framework like Next.js
+.next/
