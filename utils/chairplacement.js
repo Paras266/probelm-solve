@@ -37,7 +37,7 @@ export function calculateChairPlacements(params) {
       tableWidth,
       totalChairs,
     } = params;
-
+ 
     function clamp(v, a, b) {
       return Math.min(Math.max(v, a), b);
     }
